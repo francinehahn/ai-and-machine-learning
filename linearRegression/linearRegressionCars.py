@@ -6,7 +6,6 @@ import scipy.stats as stats
 import seaborn as sns
 
 base = pd.read_csv('files/mt_cars.csv')
-base.shape
 base.head()
 
 base = base.drop(['Unnamed'], axis=1)
@@ -15,7 +14,7 @@ corr = base.corr()
 sns.heatmap(corr, cmap='coolwarm', annot=True, fmt='.2f') #goo way to see the correlation between variables
 plt.show()
 
-#analyzing the correlation between the dependant variable mpg (the variable that we want to predict) and the other independent variables
+#analyzing the correlation between the dependent variable mpg (the variable that we want to predict) and the other independent variables
 column_pairs = [('mpg', 'cyl'), ('mpg', 'disp'), ('mpg', 'hp'), ('mpg', 'wt'), ('mpg', 'drat'), ('mpg', 'vs')]
 n_plots = len(column_pairs)
 fig, axies = plt.subplots(nrows=n_plots, ncols=1, figsize=(6,4 * n_plots))

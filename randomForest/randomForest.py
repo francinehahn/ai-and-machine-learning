@@ -21,7 +21,6 @@ for i in range(X.shape[1]): #it will go through all the columns
 print("y: ", y)
 print("X: ", X)
 
-
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
 
 model = RandomForestClassifier(random_state=1, n_estimators=500, max_depth=12, max_leaf_nodes=12)
